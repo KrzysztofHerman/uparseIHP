@@ -16,7 +16,7 @@ include_directories(/usr/local/include)
 link_directories(/usr/local/lib)
 
 # Add the executable
-add_executable(default default.cpp)
+add_executable(default src/default.cpp)
 
 # Link libraries
 target_link_libraries(default muparser)
