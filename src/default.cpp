@@ -19,7 +19,8 @@ void processEquation(int option, const string& equation) {
             cout << "Option 0 selected: Resistor value  based on w, l, b, m" << endl;
             cout << "Equation: " << equation << endl;
             try
-            {
+            {   /* the following variables are the instance parameters of the device exposed to the designer 
+                in the properties window*/
                 double var_w = 1.0e-6;
                 double var_l = 1.0e-6;
                 double    var_b = 0;
@@ -32,6 +33,7 @@ void processEquation(int option, const string& equation) {
                 p.SetExpr(equation);
                 double var_res;
                 var_res = p.Eval();
+                /* this result sould be updated by a callback function*/
                 std::cout << var_res << std::endl;
                 
             }
